@@ -1,0 +1,8 @@
+# Ignore generated icon file (will be created from icon.png)
+icon.ico
+
+# Keep these files
+!.gitkeep
+!icon.png
+!installer.nsh
+!ICON_INSTRUCTIONS.md

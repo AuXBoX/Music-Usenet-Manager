@@ -1,0 +1,55 @@
+{
+  "appId": "com.musicusenetmanager.app",
+  "productName": "Music Usenet Manager",
+  "copyright": "Copyright © 2024 Music Usenet Manager",
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "package.json",
+    "node_modules/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "build/icon.png",
+      "to": "icon.png"
+    }
+  ],
+  "publish": {
+    "provider": "github",
+    "owner": "AuXBoX",
+    "repo": "Music-Usenet-Manager",
+    "releaseType": "release"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "build/icon.ico",
+    "artifactName": "${productName}-Setup-${version}.${ext}",
+    "publisherName": "Music Usenet Manager",
+    "verifyUpdateCodeSignature": false,
+    "requestedExecutionLevel": "asInvoker"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "installerIcon": "build/icon.ico",
+    "uninstallerIcon": "build/icon.ico",
+    "installerHeaderIcon": "build/icon.ico",
+    "createDesktopShortcut": "always",
+    "createStartMenuShortcut": true,
+    "shortcutName": "Music Usenet Manager",
+    "runAfterFinish": true,
+    "deleteAppDataOnUninstall": false,
+    "perMachine": false,
+    "license": "LICENSE.txt",
+    "include": "build/installer.nsh"
+  }
+}
